@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:learn_http/repository/repository.dart';
+import 'package:learn_http/servise/local_database.dart';
 
-void main() {
+void main() async{
+
+  await LocalStrage().getInstance();
+
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Home(),
